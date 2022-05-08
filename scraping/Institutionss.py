@@ -28,7 +28,7 @@ def institute_id(school_name):
     return ID, 
 
 
-print(institute_id("Harvard%20University"))
+
 
 def number_of_authors(institute_ID):
 
@@ -54,7 +54,7 @@ def author_by_institute(institute_ID,author_num):
     if ID.startswith('https://openalex.org/'):
         return ID[len('https://openalex.org/'):]
     return ID
-print(author_by_institute(institute_id("Harvard%20University"),50))
+
 
 
 def author_cited_by(cited_by_api_url,items_per_page,author_ID,first_pub_year,year_range,first_pub_date):
@@ -117,4 +117,14 @@ def works_by_author(author_ID,years_from_first_pub,year_range):
     return total_citations
 
 
-print(works_by_author("A1979847480",1900,100))
+url = "https://api.openalex.org/works?filter=author.id:A2418631397"
+json_obj = urllib.request.urlopen(url)
+data = json.load(json_obj)
+for item in data["results"]:
+   print(item["display_name"])
+   print(item["doi"])
+   l=[]
+   for author in item["authorships"]:
+       if (author["author"]["display_name"]):
+           l.append(author["author"]["display_name"])
+   print(l)

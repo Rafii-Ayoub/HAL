@@ -14,7 +14,7 @@ url = 'https://api.openalex.org/authors?'+type
 json_obj = urllib.request.urlopen(url)
 
 data = json.load(json_obj)
-print(data)
+
 
 
 def get_num_authors(data):
