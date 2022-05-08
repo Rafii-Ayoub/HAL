@@ -62,4 +62,4 @@ class institution:
   
         
 
-print(institutions("LISTIC").get_authors_names())
+print(institution("Universite%20Savoie%20Mont%20Blanc").get_authors_names())
