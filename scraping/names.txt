@@ -5,9 +5,9 @@ Ilham ALLOUI
 Khadija ARFAOUI
 Abdourrahmane ATTO
 Alexandre BENOIT
-Éric BENOIT
+Eric BENOIT
 Lamia-Amel BERRAH
-Julien BOISSIÈRE
+Julien BOISSIERE
 Philippe BOLON
 Reda BOUKEZZOULA
 Francesco BRONZINO
@@ -15,7 +15,7 @@ Sorana CIMPAN
 Didier COQUIN
 Vincent COUTURIER
 Luc DAMAS
-Françoise DELOULE
+Francoise DELOULE
 Yves DUMOND
 Laurent FOULLOY
 Sylvie GALICHET
@@ -24,17 +24,17 @@ Marc-Philippe HUGET
 Patrick LAMBERT
 Faiza LOUKIL
 Gilles MAURIS
-Nicolas MÉGER
+Nicolas MEGER
 Ammar MIAN
-Sébastien MONNET
-Stéphane PERRIN
-Frédéric POURRAZ
+Sebastien MONNET
+Stephane PERRIN
+Frederic POURRAZ
 Christophe ROCHE
-Kavé SALAMATIAN
+Kave SALAMATIAN
 David TELISSON
-Emmanuel TROUVÉ
+Emmanuel TROUVE
 Lionel VALET
-Hervé VERJUS
+Herve VERJUS
 Flavien VERNIER
 Yajing YAN
 Farah ABDEL KHALEK
@@ -47,14 +47,14 @@ Asma DHAOUADI
 Ranya EL-HADRI
 Mathieu GALLET
 Melissa LIBORIO-ZAPATA
-Étienne MAUFFRET
+Etienne MAUFFRET
 Saloua NAAMA
 Fanny PAGNIER
 Blandine PICHON
 Xinyi ZHANG
 Pascal AYGALINC
 Soizick CALVEZ
-Éric CHOTIN
+Eric CHOTIN
 Jean-Jacques CURTELIN
 Pascal MOUILLE
 Maria PAPADOPOULOU
@@ -77,15 +77,15 @@ Hela Hadri
 Charles Lesniewska-Choquet
 Jingxiu Su
 Matthias Jauvin
-Cédric Deffo Sikounmo
+Cedric Deffo Sikounmo
 Kevin Jacq
 Hoang Viet Tuan Nguyen
 Bruno Almeida
-Rizlène Outach Raoui
+Rizlene Outach Raoui
 Damien Carver
 Julien Roche
 Zhang Zhenling
-Mériem Hafsi
+Meriem Hafsi
 Triaa Wafa
 Carvalho Sara
 Tuan Nguyen
@@ -105,7 +105,7 @@ Ge Li
 He Peng
 Hiayang Jiang
 Ha-Tai Pham
-Madi Kaboré
+Madi Kabore
 Liviu-Christian Dutu
 Maxime Boizard
 Sabin Tiberius Strat
@@ -125,12 +125,12 @@ Florent Martin
 Alain Simac-Lejeune
 Azadeh Razavidazeh
 Amaury Bisserier
-Grégory Pais
-Lavinia Darléa
+Gregory Pais
+Lavinia Darlea
 Olivier Passalaqua
-Mickaêl Biardeau
+Mickael Biardeau
 Sofiane Sahraoui
-Ivan Pétillot
+Ivan Petillot
 Nabila Salmi
 Karim Tamani
 Sylvie Jullien
@@ -142,7 +142,7 @@ Bogdan Ionescu
 Afef Denguir-Rekik
 Christophe Tricot
 Vincent Bronet
-Jerôme Revillard
+Jerome Revillard
 Laetitia Avrillon
 Thomas Allevard
 Thierry Siebenborn
@@ -162,15 +162,15 @@ Homada Boumedane
 Muriel Briamonte
 Brice Carnus
 Samia Chouder
-Vincent Clivillé
+Vincent Cliville
 Assia Combettes
 Richard Dapoigny
 Florence De Chanaleilles
 Marie-Pascale Durousseau
-Valérine Delsol
-Stéphane Ducasse
+Valerine Delsol
+Stephane Ducasse
 Carmen Gervais
-José Guerrero Mata
+Jose Guerrero Mata
 Olivier Hotel
 Quentin Hoarau
 Nathalie Jeannes
@@ -180,8 +180,8 @@ Mathieu Mangeot
 Olga Maslova
 Sofiane Medjram
 Patrice Moreaux
-Joëlle Pellet
-Sébastien Piolat
+Joelle Pellet
+Sebastien Piolat
 Davide Pironne
 Sylvain Pralon
 Jean-Charles Profizi

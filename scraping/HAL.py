@@ -6,6 +6,7 @@ class HAL:
         self.HALPapers={"Result":[]}
         self.HALPapersIds=[]
         json.dumps(self.HALPapers)
+        
     #using the HAL API to get the articals where the name and the last name of the resercher exists
     def getPaperByName(self,name,lastname):
         response = requests.get('https://api.archives-ouvertes.fr/search/?q=({} {})'.format(name,lastname)).json()

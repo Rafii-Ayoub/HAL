@@ -117,27 +117,31 @@ class author:
 
     def get_authorship(self):
 
-        pub_list=[]
+        authors_list=[]
+        pub_dict = {}
         for item in self.data["results"]:
-            pub_dict = {}
-            pub_dict["name"] = item["display_name"]
+            
+            pub_dict["author"]=item["display_name"]
             if(len(item)>0):
                 ID = item["id"]
                 if ID.startswith('https://openalex.org/'):
                     ID = ID[len('https://openalex.org/'):]    
                 url = "https://api.openalex.org/works?filter=author.id:"+ID
-                print(url)
+
                 json_obj = urllib.request.urlopen(url)
                 data2 = json.load(json_obj)
-                list2 =[]
+                
+               
                 for item in data2["results"]:
                     for author in item["authorships"]:
                         if (author["author"]["display_name"]):
-                            list2.append(author["author"]["display_name"])
-                pub_dict["authorship"] = list2
-            pub_list.append(pub_dict)
+                            authors_list.append(author["author"]["display_name"])    
 
-        return pub_list
+        res={}
+        for i in authors_list:
+            res[i] = authors_list.count(i)
+        pub_dict["Coauthors"] = res
+        return pub_dict
    
 
     def get_last_known_institution(self):
@@ -172,12 +176,22 @@ class author:
                 for element in item["x_concepts"]:
                        list.append(element["display_name"])
 
+       
         return list
+    
+    def work_counts(self):
+        i=0
+        works_dict={}
+        for item in self.data["results"]:
+            i += item["works_count"]
+            works_dict["name"] = item["display_name"] 
+        works_dict["works_count"] = i
+        return works_dict
 
     def get_count_by_year(self):
         list=[]
         for item in self.data["results"]:
-            if(item["counts_by_year"]):
+            
                 years=[] 
                 works_count=[]
                 cited_by_count=[]
@@ -192,12 +206,7 @@ class author:
                 dic["years"]=years
                 dic["works_count"]=works_count
                 dic["cited_by_count"]=cited_by_count
-                if(i>1):  
-                    plt.plot(years,works_count)
-                    plt.title(item["display_name"])
-                    plt.show()
-            else:
-                return None
+            
 
         return list
 
@@ -224,9 +233,9 @@ class author:
 
 
 
-with open('scraping/listic_members.txt', 'r') as f:
+with open('scraping/names.txt', 'r') as f:
     #liste = f.split(";")
-    listic_members=f.read().split(";")
+    listic_members=f.read().split("\n")
  
 
 """dict ={}
@@ -242,15 +251,35 @@ with open('publications_info.json', 'w') as jsonFile:
     json.dump(dict, jsonFile)
     jsonFile.close()
         """
-dict ={}
+        
+"""l=[]
+for k in listic_members:
+        k = k.replace(" ", "%20")
+        s1 = author(str(k))
+        print("ok"+str(k))
+        l+= s1.key_words()
+        keywords=[]
+        for i in l:
+          count =l.count(i)
+          if(count>100):
+            keyword_dic={}
+            keyword_dic["value"] = i
+            keyword_dic["count"] = count
+            keywords.append(keyword_dic)
+        
+       
+
+with open('keyword_bis.json', 'w', encoding='utf-8') as jsonFile: 
+    json.dump(keywords, jsonFile,ensure_ascii=False)
+    jsonFile.close()"""
+
+
 l=[]
 for k in listic_members:
         k = k.replace(" ", "%20")
         s1 = author(str(k))
-        print("ok1")
-        l.append(s1.get_authorship())
-        print(l)
-with open('authorship.json', 'w') as jsonFile:
-    dict["result"] =l   
-    json.dump(dict, jsonFile)
+        print("ok"+str(k))
+        l.append(s1.work_counts())
+with open('statistics.json', 'w', encoding='utf-8') as jsonFile: 
+    json.dump(l, jsonFile,ensure_ascii=False)
     jsonFile.close()
